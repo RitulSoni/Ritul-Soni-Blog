@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">
-  Personal Blog - <em>Mere Musings</em>
+  Ritul Soni's - <em>Personal Website</em>
 </h1>
 
 <p align="center">
