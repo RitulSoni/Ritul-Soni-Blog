@@ -39,7 +39,7 @@ export default function Home({ posts }) {
                 animate="true"
                 type="box"
                 show={true}
-                color="#DE1D8D"
+                color="#ff2500"
                 animationDelay={1000}
                 animationDuration={2500}
                 className="text-slate-200"
@@ -54,7 +54,7 @@ export default function Home({ posts }) {
                 animate="true"
                 type="highlight"
                 show={true}
-                color="#DE1D8D"
+                color="#ff2500"
                 animationDelay={1000}
                 animationDuration={2500}
                 className="text-slate-200"
