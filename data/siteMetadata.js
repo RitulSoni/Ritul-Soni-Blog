@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'Blog | Ritul K. Soni',
+  title: 'Home | Ritul K. Soni',
   author: 'Ritul K. Soni',
   headerTitle: 'Mere Musings',
   description: 'My personal blog where I share my musings',
