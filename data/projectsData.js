@@ -1,13 +1,13 @@
 const projectsData = [
   {
-    title: 'Neural Style Transfer Flask App',
-    description: `It is a Flask application that uses a deep neural network to apply artistic styles to images. Users can upload their own image, select a content image and a style image, and generate stunning outputs that blend the content and style seamlessly.`,
+    title: 'iHeart Mobile App',
+    description: `This is a cross mobile application that displays 3D models of various congenital heart diseases for pediatric patients and allows for patient profile creation and different patient and doctor dashboards`,
     imgSrc: '',
     href: '',
-    github: 'https://github.com/RitulSoni/Neural-Style-Transfer',
-    tech1: 'Python3',
-    tech2: 'PyTorch',
-    tech3: 'Flask',
+    github: 'https://github.com/RitulSoni/I-Heart-App',
+    tech1: 'Flutter',
+    tech2: 'Firebase',
+    tech3: 'Firestore',
   },
   {
     title: '3D Space Game',
@@ -20,6 +20,16 @@ const projectsData = [
     tech3: 'Javascript',
   },
   {
+    title: 'Neural Style Transfer Flask App',
+    description: `It is a Flask application that uses a deep neural network to apply artistic styles to images. Users can upload their own image, select a content image and a style image, and generate stunning outputs that blend the content and style seamlessly.`,
+    imgSrc: '',
+    href: '',
+    github: 'https://github.com/RitulSoni/Neural-Style-Transfer',
+    tech1: 'Python3',
+    tech2: 'PyTorch',
+    tech3: 'Flask',
+  },
+  {
     title: 'Open Flights Data Analysis',
     description: `I used the OpenFlights dataset to create a graph of connected airports and routes. By cleaning the data and implementing an adjacency list representation of a weighted graph, my team achieved optimal runtimes. This  project offers various command line commands for finding the shortest path between airports, identifying the busiest airports, and determining the number of connected airports in a component.`,
     imgSrc: '',
@@ -28,16 +38,6 @@ const projectsData = [
     tech1: 'C++',
     tech2: 'CMake',
     tech3: 'Git',
-  },
-  {
-    title: 'Sentiment Analysis',
-    description: `This is a web app which can be used to analyze users' sentiments across different platforms using REST Apis. Made with Python, Flask, HTML, Javascript and deployed using Vercel. The model was trained using tweets from Sentiment140 dataset with 1.6 million tweets.`,
-    imgSrc: '',
-    href: '',
-    github: 'https://github.com/pycoder2000/sentiment-analysis',
-    tech1: 'Flask',
-    tech2: 'NLTK',
-    tech3: 'TfidfVectorizer',
   },
   {
     title: 'Salary Predictor',
