@@ -24,6 +24,8 @@ import {
 export const getServerSideProps = async () => {
   const response = await fetch(
     'https://api.openweathermap.org/data/2.5/weather?lat=23.014770&lon=72.526330&appid=1b3c10c18e894eaf1fd63eedde53fa54&units=metric'
+    // https://api.openweathermap.org/data/2.5/weather?lat=41.8789&lon=87.6359&appid=413e0bfa580f7aa3b26c8a042781b5e3
+    //Replace the API link with this one once my key activates 
   )
   const data = await response.json()
 
@@ -141,12 +143,12 @@ export default function Now(currentlyReading) {
         <div>
           <div className="flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
-              <span className="ml-2 font-semibold">Location:</span> <span>Ahmedabad, India</span>
+              <span className="ml-2 font-semibold">Location:</span> <span>Chicago, IL</span>
               <br />
               <span className="ml-2 font-semibold">Weather:</span>{' '}
               <span>
                 <a
-                  href="https://weather.com/en-GB/weather/today/l/f42d9f8baa19b4d8d5e034449faa703839993366f64551a56a2b530297075dc2"
+                  href="https://weather.com/en-GB/weather/today/l/624f0cccc10bececfa4c083056cef743837a76588790f476c9ebea44be35e51f"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline-offset-1 hover:underline"
@@ -213,41 +215,36 @@ export default function Now(currentlyReading) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            I work as a Data Engineer at{' '}
+            Currently, I am the head of Research & Development{' '}
             <Link
-              href={'https://www.accenture.com/'}
+              href={'https://careeradvancementexchange.com'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Accenture
+              Career Advancement Exchange
             </Link>
             .
           </p>
           <br />
           <p>
-            I work on building pipelines and automating the entire process using Scala and Gcloud.
+            I oversee the development of new technologies and resources for the startup. 
           </p>
           <br />
           <p>
-            I have been trying to shift my field from Data Engineering to Data Science. I have been
-            constantly applying for the same as well.
+          I've been on a quest to keep up with the ever-changing modern world by diving into learning and researching new technologies. Lately, I've been getting my hands dirty with cool tools like MidJourney, playing around with LLMs like Chat GPT, exploring the creative possibilities of 3D design software like Spline, and even tinkering with various other AI tools. It's been a blast incorporating these tech wonders into my daily workflow and seeing how they amp up my productivity and push the boundaries of what I can do. 
           </p>
           <br />
           <p>
-            My location preference is Bangalore but I am open to shift to another place for a better
-            opportunity.
-          </p>
-          <br />
-          <p>
-            I'm always trying to learn more, and at the moment I'm trying to follow this{' '}
+          I'm always eager to expand my knowledge and keep up with the latest trends. Right now, I'm diving deep into{' '}
             <Link
               href={
-                'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
+                'https://youtu.be/slentvTk3gY'
               }
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Machine Learning tutorial
+              Figma to 3D Webpage Tutorial
             </Link>
             .
+            <br />
           </p>
         </div>
         <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
