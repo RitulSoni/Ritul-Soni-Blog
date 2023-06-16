@@ -5,7 +5,7 @@ import utc from 'dayjs/plugin/utc'  // add this at the top of your file
 import timezone from 'dayjs/plugin/timezone'  // add this at the top of your file
 import { useEffect, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
-import { getCurrentlyReading } from '@/lib/goodreads'
+// import { getCurrentlyReading } from '@/lib/goodreads'
 import fetcher from 'lib/fetcher'
 import useSWR from 'swr'
 import { FaCloudShowersHeavy } from 'react-icons/fa'
@@ -31,17 +31,22 @@ export const getServerSideProps = async () => {
   )
   const data = await response.json()
 
-  const currentlyReading = await getCurrentlyReading({ limit: 1 })
+  // const currentlyReading = await getCurrentlyReading({ limit: 1 })
+  
+  const hardCodedBook = {
+    title: "Burn Rate: Launching a Startup & Losing My Mind",
+    author: "Andy Dunn",
+    url: "https://www.goodreads.com/book/show/58784468-burn-rate?ac=1&from_search=true&qid=Y9mHNCKuJh&rank=1" // update the URL as needed
+  };
 
   return {
-    props: { currentlyReading, data },
+    props: { currentlyReading: hardCodedBook, weatherData: data },
   }
 }
 
-export default function Now(currentlyReading) {
+export default function Now({currentlyReading, weatherData}) {
   const { data } = useSWR('/api/now-playing', fetcher)
-  let currentlyReadingData = currentlyReading['currentlyReading']
-  let weatherData = currentlyReading['data']
+  // let currentlyReadingData = currentlyReading['currentlyReading']
   const { temp: temperature } = weatherData.main
   const { icon: weatherIcon, description: weatherDescription } = weatherData.weather[0]
 
@@ -74,13 +79,11 @@ export default function Now(currentlyReading) {
   var second = new Date().getSeconds()
   dayjs.extend(utc)
   dayjs.extend(timezone)
-  const now = () => dayjs().tz("America/Chicago")
-
   const format = 'hhA'
-  const [TodayDate, setDate] = useState(now())
+  const [TodayDate, setDate] = useState(dayjs().tz("America/Chicago"))
 
   useEffect(() => {
-    const timer = setInterval(() => setDate(now()), 1000)
+    const timer = setInterval(() => setDate(dayjs().tz("America/Chicago")), 1000)
     return () => clearInterval(timer)
   }, [])
 
@@ -168,13 +171,13 @@ export default function Now(currentlyReading) {
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Reading:</span>{' '}
               <a
-                href={currentlyReadingData[0].url}
+                href={currentlyReading.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline-offset-1 hover:underline"
               >
-                <span>{currentlyReadingData[0].title}</span> by{' '}
-                <span>{currentlyReadingData[0].author}</span>
+                <span>{currentlyReading.title}</span> by{' '}
+                <span>{currentlyReading.author}</span>
               </a>
               <br />
               <span className="ml-2 font-semibold">Age:</span> <span>{ageString}</span>
