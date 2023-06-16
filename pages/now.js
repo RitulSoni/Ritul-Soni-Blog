@@ -161,7 +161,7 @@ export default function Now({currentlyReading, weatherData}) {
                   rel="noopener noreferrer"
                   className="underline-offset-1 hover:underline"
                 >
-                  {icons[`_${weatherIcon}`]} Currently <b>{parseInt(temperature)}°C</b>
+                  {icons[`_${weatherIcon}`]} Currently <b>{parseInt(temperature)}°F</b>
                   {' with '}
                   <span>{weatherDescription}</span>
                 </a>
