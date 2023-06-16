@@ -20,7 +20,7 @@
 
 </div>
 
-![demo](https://github.com/pycoder2000/blog/raw/master/public/static/images/demo.png)
+
 
 <div align="center">
 
