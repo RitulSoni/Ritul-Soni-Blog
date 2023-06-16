@@ -23,8 +23,8 @@ import {
 
 export const getServerSideProps = async () => {
   const response = await fetch(
-    'https://api.openweathermap.org/data/2.5/weather?lat=23.014770&lon=72.526330&appid=1b3c10c18e894eaf1fd63eedde53fa54&units=metric'
-    // https://api.openweathermap.org/data/2.5/weather?lat=41.8789&lon=87.6359&appid=413e0bfa580f7aa3b26c8a042781b5e3
+    'https://api.openweathermap.org/data/2.5/weather?lat=41.878876&lon=-87.635918&appid=413e0bfa580f7aa3b26c8a042781b5e3&units=imperial'
+    // 
     //Replace the API link with this one once my key activates 
   )
   const data = await response.json()

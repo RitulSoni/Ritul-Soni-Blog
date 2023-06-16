@@ -2,5 +2,8 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/api/now-playing": "pages/api/now-playing.js"
+  "/404": "pages/404.js",
+  "/now": "pages/now.js",
+  "/api/now-playing": "pages/api/now-playing.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
 }
