@@ -1,93 +1,63 @@
 const usesData = [
   {
-    title: 'Macbook Pro 13"',
-    description: `M1 - 8 core CPU, 8 core GPU, 16 GB RAM`,
-    href: 'https://www.amazon.in/Apple-MacBook-Chip-13-inch-256GB/dp/B08N5VSQNG',
+    title: 'Macbook Pro 16"',
+    description: `M1 Pro - 10 core CPU, 16 core GPU, 16 GB RAM , 512GB SSD`,
+    href: 'https://a.co/d/auVHiUb',
   },
   {
-    title: 'Alfred',
-    description: `Productivity on Mac`,
-    href: 'https://www.alfredapp.com/',
+    title: 'LG C2 OLED 42" TV',
+    description: `Currently using this as my main monitor. Pros: 4k 120Hz, Perfect Blacks, Lots of Real Estate Cons: expensive, neck pain`,
+    href: 'https://a.co/d/esgtnKp',
   },
   {
-    title: 'Superhuman',
-    description: `Email client with keybindings`,
-    href: 'https://superhuman.com',
+    title: 'Logitech MX Keys',
+    description: `Best out the box ready keyboard for Mac Users`,
+    href: 'https://a.co/d/4ZwVMXG',
+  },
+  {
+    title: 'Logitech MX Master Mouse',
+    description: `Best wireless mouse you can buy hands down`,
+    href: 'https://a.co/d/0BrTuGq',
   },
   {
     title: 'VSCode',
-    description: `Nothing shocking here. Click here to find my plugins & config`,
-    href: 'https://gist.github.com/pycoder2000/36812bb44f24e96ce09359cefd9e7198',
-  },
-  {
-    title: 'warp',
-    description: `Trying out the beta version of this shell, looks promising`,
-    href: 'https://www.warp.dev/',
-  },
-  {
-    title: 'iTerm2',
-    description: `This one works well, like the customisability`,
-    href: 'https://ohmyz.sh/',
+    description: `My IDE of choice`,
+    href: 'https://code.visualstudio.com',
   },
   {
     title: 'zsh',
-    description: `Recently started using this shell, like the customisability`,
+    description: `My go to shell. I typically use zsh but have been trying the bash shell as well. I linked a video to the customization I use`,
+    href: 'https://www.youtube.com/watch?v=0FZSshb1qTQ',
+  },
+  {
+    title: 'iTerm2',
+    description: `My favorite terminal. Has much more features than stock macOS terminal`,
     href: 'https://iterm2.com/',
   },
   {
-    title: 'Microsoft Edge',
-    description: `Good for developing and efficiently using the RAM`,
-    href: 'https://www.microsoft.com/en-us/edge?r=1',
-  },
-  {
-    title: 'Level Up',
-    description: `I regularly change themes in VS Code for fun, this is my current theme`,
-    href: 'https://marketplace.visualstudio.com/items?itemName=leveluptutorials.theme-levelup',
-  },
-  {
-    title: 'Material Theme Icons',
-    description: `I just select the most popular icon theme at some point`,
-    href: 'https://marketplace.visualstudio.com/items?itemName=leveluptutorials.theme-levelup',
-  },
-  {
-    title: 'Linear',
-    description: `The best project management app out there. Believe me.`,
-    href: 'https://linear.app',
-  },
-  {
-    title: 'Hyper & Oh My Zsh',
-    description: `Click here to find my plugins & config`,
-    href: 'https://gist.github.com/DLevai94/af307fb45d525ffebf38750970f98ed2',
-  },
-  {
-    title: 'Daily.dev',
-    description: `Homepage to stay up to date in the dev world`,
-    href: 'https://api.daily.dev/',
-  },
-  {
-    title: 'EmailOctopus',
-    description: `For newsletter and automations`,
-    href: 'https://emailoctopus.com/',
-  },
-  {
-    title: 'Canva',
-    description: `Sometimes I use Canva to edit some images quickly.`,
-    href: 'https://www.canva.com/',
-  },
-  {
-    title: 'Obsidian',
-    description: `My tool for thinking, helps my store and connect knowledge`,
-    href: 'https://obsidian.md/',
+    title: 'Safari',
+    description: `My go to browser for privacy and speed`,
+    href: 'https://www.apple.com/safari/#:~:text=Blazing%20fast.&text=Safari%20is%20the%20best%20way,it%27s%20the%20world%27s%20fastest%20browser.',
   },
   {
     title: 'Figma',
-    description: `Designs and graphics`,
+    description: `Where my design ideas come to life`,
     href: 'https://figma.com',
   },
   {
     title: 'Notion',
     description: `Permanent docs, organizing my life.`,
     href: 'https://www.notion.so/',
+  },
+  {
+    title: 'Rectangle',
+    description: `Move and resize windows in macOS using keyboard shortcuts or snap areas`,
+    href: 'https://rectangleapp.com',
+  },
+  {
+    title: 'Discord',
+    description: `Best community app hands down `,
+    href: 'https://discord.com',
   },
 ]
 
