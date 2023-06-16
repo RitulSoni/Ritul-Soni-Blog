@@ -13,11 +13,10 @@ export default function Uses() {
             Uses
           </h1>
           <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
-            Software and hardware collection of things I'm using daily.
+            Here is the all the Tech I Use Everyday
           </p>
           <div className="mt-5 mb-3 text-xs text-gray-500 dark:text-gray-400">
-            Note: This page contains links to buy or download the products. If you click through and
-            purchase, I do not receive any compensation for that purchase.
+            Note: There are no affliate links on this site!
           </div>
         </div>
         <div className="container py-12">
@@ -57,12 +56,6 @@ export default function Uses() {
               </Link>
             ))}
           </div>
-        </div>
-        <div className="pt-10">
-          <span className="text-base text-gray-500 dark:text-gray-400">
-            P.S. I am planning on remaking this site in the future, so stay around to see what I
-            come up with ;)
-          </span>
         </div>
       </div>
     </>
