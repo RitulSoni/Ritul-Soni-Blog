@@ -1,6 +1,8 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import { dayjs } from '@/components/DayJS'
+import utc from 'dayjs/plugin/utc'  // add this at the top of your file
+import timezone from 'dayjs/plugin/timezone'  // add this at the top of your file
 import { useEffect, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import { getCurrentlyReading } from '@/lib/goodreads'
@@ -70,7 +72,10 @@ export default function Now(currentlyReading) {
   var hour = new Date().getHours()
   var minute = new Date().getMinutes()
   var second = new Date().getSeconds()
-  const now = () => dayjs().tz()
+  dayjs.extend(utc)
+  dayjs.extend(timezone)
+  const now = () => dayjs().tz("America/Chicago")
+
   const format = 'hhA'
   const [TodayDate, setDate] = useState(now())
 
@@ -179,7 +184,7 @@ export default function Now(currentlyReading) {
           <div className="-my-6 flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Date:</span>{' '}
-              <span>{TodayDate.format('DD/MM/YYYY')}</span>
+              <span>{TodayDate.format('MM/DD/YYYY')}</span>
               <br />
               <span className="ml-2 font-semibold">Time:</span>{' '}
               <span>
@@ -205,7 +210,7 @@ export default function Now(currentlyReading) {
                 )}
               </span>
               <br />
-              <span className="ml-2 font-semibold">Drinking:</span> <span>Coffee</span>
+              <span className="ml-2 font-semibold">Drinking:</span> <span>Chai</span>
             </div>
           </div>
         </div>
