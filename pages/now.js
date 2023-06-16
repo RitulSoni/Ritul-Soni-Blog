@@ -71,14 +71,14 @@ export default function Now({currentlyReading, weatherData}) {
     _50n: <BsCloudFogFill className="mb-0.5 inline h-3 w-3 hover:animate-spin" />,
   }
 
+  dayjs.extend(utc)
+  dayjs.extend(timezone)
   var year = new Date().getFullYear()
-  var month = new Date().getMonth()
+  var month = new Date().getMonth() + 1 
   var date = new Date().getDate()
   var hour = new Date().getHours()
   var minute = new Date().getMinutes()
   var second = new Date().getSeconds()
-  dayjs.extend(utc)
-  dayjs.extend(timezone)
   const format = 'hhA'
   const [TodayDate, setDate] = useState(dayjs().tz("America/Chicago"))
 
@@ -144,7 +144,7 @@ export default function Now({currentlyReading, weatherData}) {
         <div className="my-2">
           <h3>Where am I and what am I doing?</h3>
           <div className=" mt-4 mb-6 text-xs text-neutral-700 dark:text-neutral-400">
-            This page was automatically updated @ {date}-{month}-{year} {hour}:{minute}:{second}
+            This page was automatically updated @ {month}-{date}-{year} {hour}:{minute}:{second}
           </div>
         </div>
         {/* Misc */}
@@ -262,27 +262,17 @@ export default function Now({currentlyReading, weatherData}) {
         {/* Personal life */}
         <div className="pt-6">
           <p>
-            I've been slowly building this website, trying to share interesting things with anyone
-            who wants to read it.{' '}
+            I've been gradually building up my online portfolio and blog to have a place to share the insights of my life online. Almost like a virtual journal.{' '}
             <Link
               href={'https://www.swyx.io/learn-in-public'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
               This
             </Link>{' '}
-            article is a great reason to start your blog.
+            article is a great reason to start your own blog.
           </p>
           <br />
-          <p>
-            I am also going to start applying for Masters in Data Science in August 2022 for intake
-            of Fall 2023. I hope to get a good university near the West Coast. I'll update this page
-            after I get my admits.
-          </p>
           <br />
-          <p>
-            I recently started to draft a post about my new Obsidian worklfow, it will be a good
-            one!
-          </p>
         </div>
         <div className="mt-3 text-sm">
           For more examples of folks with /now pages, check out{' '}
