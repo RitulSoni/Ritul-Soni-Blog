@@ -31,7 +31,7 @@ export default function Home({ posts }) {
               </span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
-              {`Welcome to blog where I share my experiences and interests. I am a Software Engineer who is passionate about Deep Learning and Quant. In my free time, I like developing `}
+              {`Welcome to blog where I share my experiences and interests. I am a Software Engineer who is passionate about Quant, Economics, and AI/ML. In my free time, I like developing `}
               side projects and learning new technologies.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
@@ -47,7 +47,7 @@ export default function Home({ posts }) {
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
-              in between. Have a good read!
+              in between. 
             </p>
             <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               This is my place for{' '}
@@ -62,7 +62,7 @@ export default function Home({ posts }) {
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
-              in between. Have a good read!{' '}
+              in between. {' '}
               <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
