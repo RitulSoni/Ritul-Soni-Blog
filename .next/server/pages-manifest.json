@@ -3,5 +3,10 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/api/now-playing": "pages/api/now-playing.js",
+  "/api/views": "pages/api/views.js",
+  "/api/top-tracks": "pages/api/top-tracks.js",
+  "/api/twitter-user": "pages/api/twitter-user.js",
+  "/api/github-stats": "pages/api/github-stats.js",
+  "/": "pages/index.js",
   "/api/views/[slug]": "pages/api/views/[slug].js"
 }
