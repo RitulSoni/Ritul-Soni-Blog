@@ -167,7 +167,7 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <>
                   <Link>
@@ -211,7 +211,7 @@ export default function DropMenu() {
                   </Link>
                 </>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
           </div>
           <div className="py-1">
             <Menu.Item>
@@ -340,7 +340,7 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link href="/recommends">
                   <a
@@ -357,7 +357,7 @@ export default function DropMenu() {
                   </a>
                 </Link>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item>
               {({ active }) => (
                 <Link href="/quotes">
@@ -376,7 +376,7 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link href="/activity">
                   <a
@@ -393,8 +393,8 @@ export default function DropMenu() {
                   </a>
                 </Link>
               )}
-            </Menu.Item>
-            <Menu.Item>
+            </Menu.Item> */}
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link href="/tweets">
                   <a
@@ -411,7 +411,7 @@ export default function DropMenu() {
                   </a>
                 </Link>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
           </div>
         </Menu.Items>
       </Transition>
