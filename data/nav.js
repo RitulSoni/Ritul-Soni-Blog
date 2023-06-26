@@ -8,13 +8,14 @@ export const navigation = {
     { name: 'Uses', href: '/uses' },
     { name: 'Now', href: '/now' },
     { name: 'Tags', href: '/tags' },
-    { name: 'Snippets', href: '/snippets' },
     { name: 'Stats', href: '/stats' },
-    { name: 'Journey', href: '/journey' },
     { name: 'Quotes', href: '/quotes' },
-    { name: 'Guestbook', href: '/guestbook' },
     { name: 'RSS', href: '/feed.xml' },
 
+    
+    // { name: 'Journey', href: '/journey' },
+    // { name: 'Guestbook', href: '/guestbook' },
+    // { name: 'Snippets', href: '/snippets' },
     // { name: 'Recommends', href: '/recommends' },
     // { name: 'Activity', href: '/activity' },
     // { name: 'Tweets', href: '/tweets' },
