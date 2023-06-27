@@ -1,32 +1,14 @@
 {
   "../components/ClientReload.js -> socket.io-client": {
-    "id": 3264,
+    "id": "../components/ClientReload.js -> socket.io-client",
     "files": [
-      "static/chunks/264.f23b2c996ccd324a.js"
-    ]
-  },
-  "../components/comments/index.js -> @/components/comments/Disqus": {
-    "id": 257,
-    "files": [
-      "static/chunks/257.c56f8cdce4229b2b.js"
-    ]
-  },
-  "../components/comments/index.js -> @/components/comments/Giscus": {
-    "id": 732,
-    "files": [
-      "static/chunks/732.9844f656e14f738e.js"
-    ]
-  },
-  "../components/comments/index.js -> @/components/comments/Utterances": {
-    "id": 8806,
-    "files": [
-      "static/chunks/806.6ae914a7317aef72.js"
+      "static/chunks/node_modules_socket_io-client_build_esm_index_js.js"
     ]
   },
   "../node_modules/use-sound/dist/use-sound.esm.js -> howler": {
-    "id": 1766,
+    "id": "../node_modules/use-sound/dist/use-sound.esm.js -> howler",
     "files": [
-      "static/chunks/766.59d6938897d2a104.js"
+      "static/chunks/node_modules_howler_dist_howler_js.js"
     ]
   }
 }
