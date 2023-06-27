@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Home | Ritul K. Soni</title>
+      <link>https://blog.ritulsoni.com/blog</link>
+      <description>My personal blog where I share my musings</description>
+      <language>en-us</language>
+      <managingEditor>ritulsonicareer@gmail.com (Ritul K. Soni)</managingEditor>
+      <webMaster>ritulsonicareer@gmail.com (Ritul K. Soni)</webMaster>
+      <lastBuildDate>Tue, 13 Jun 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://blog.ritulsoni.com/tags/diversity/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://blog.ritulsoni.com/blog/navigating-corporate-america</guid>
+    <title>Navigating Corporate America as a First-Generation Indian American College Student</title>
+    <link>https://blog.ritulsoni.com/blog/navigating-corporate-america</link>
+    <description>Unpacking my journey as a first-generation Indian American college graduate making my way through corporate America.</description>
+    <pubDate>Tue, 13 Jun 2023 00:00:00 GMT</pubDate>
+    <author>ritulsonicareer@gmail.com (Ritul K. Soni)</author>
+    <category>Career</category><category>Diversity</category><category>Inclusion</category><category>First-Generation</category><category>Indian American</category>
+  </item>
+
+    </channel>
+  </rss>

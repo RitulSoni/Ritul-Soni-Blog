@@ -1,0 +1,24 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Home | Ritul K. Soni</title>
+      <link>https://blog.ritulsoni.com/blog</link>
+      <description>My personal blog where I share my musings</description>
+      <language>en-us</language>
+      <managingEditor>ritulsonicareer@gmail.com (Ritul K. Soni)</managingEditor>
+      <webMaster>ritulsonicareer@gmail.com (Ritul K. Soni)</webMaster>
+      <lastBuildDate>Thu, 01 Jun 2023 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://blog.ritulsoni.com/tags/education/feed.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://blog.ritulsoni.com/blog/college-gpt</guid>
+    <title>The Impact of Generative AI on College Admissions</title>
+    <link>https://blog.ritulsoni.com/blog/college-gpt</link>
+    <description>Exploring the implications of AI technologies like ChatGPT on college admissions, and the new challenges and opportunities they present.</description>
+    <pubDate>Thu, 01 Jun 2023 00:00:00 GMT</pubDate>
+    <author>ritulsonicareer@gmail.com (Ritul K. Soni)</author>
+    <category>AI</category><category>Education</category><category>College Admissions</category><category>GPT</category><category>DEI</category>
+  </item>
+
+    </channel>
+  </rss>

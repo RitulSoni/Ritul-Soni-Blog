@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { TbArrowBigTop } from 'react-icons/tb'
 
-const ScrollTop = () => {
+const ScrollTopAndComment = () => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -38,4 +38,4 @@ const ScrollTop = () => {
   )
 }
 
-export default ScrollTop
+export default ScrollTopAndComment

@@ -1,6 +1,7 @@
 {
   "name": "ritul-soni-blog",
   "version": "1.5.6",
+  "homepage": "https://ritulsoni.com",
   "private": true,
   "author": {
     "name": "Ritul K. Soni",
@@ -10,6 +11,8 @@
   "scripts": {
     "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "next build && node ./scripts/generate-sitemap",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
