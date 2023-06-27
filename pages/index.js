@@ -29,8 +29,8 @@ export default function Home({ posts }) {
               Howdy, I am{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500 flex items-center ml-2">
                 Ritul 
-                <div className="w-48 h-48 ml-2">
-                  <Image src="/static/images/Ritul Avatar.png" alt="Ritul" layout='responsive' width={200} height={200} />
+                <div className="w-32 h-32 ml-2">
+                  <Image src="/static/images/Ritul Avatar.png" alt="Ritul" layout='responsive' width={175} height={175} />
                 </div>
               </span>
             </h1>
