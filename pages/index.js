@@ -25,13 +25,10 @@ export default function Home({ posts }) {
       <div>
         <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
           <div className="pt-6">
-            <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 flex items-center">
+            <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Howdy, I am{' '}
-              <span className="text-primary-color-500 dark:text-primary-color-dark-500 flex items-center ml-2">
-                Ritul 
-                <div className="w-32 h-32 ml-2">
-                  <Image src="/static/images/Ritul Avatar.png" alt="Ritul" layout='responsive' width={175} height={175} />
-                </div>
+              <span className="text-primary-color-500 dark:text-primary-color-dark-500">
+                Ritul <Image src="/static/images/Ritul Avatar.png" alt="Ritul" width={150} height={150} />
               </span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
