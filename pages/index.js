@@ -8,7 +8,7 @@ import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
-import Image from 'next/image'
+
 
 const MAX_DISPLAY = 3
 
@@ -28,7 +28,7 @@ export default function Home({ posts }) {
             <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Howdy, I am{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">
-                Ritul <Image src="/static/images/Ritul Avatar.png" alt="Ritul" width={150} height={150} />
+                Ritul🤠
               </span>
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
