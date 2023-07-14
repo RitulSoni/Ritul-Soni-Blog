@@ -8,7 +8,7 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://blog.ritulsoni.com',
   siteRepo: 'https://github.com/RitulSoni/Ritul-Soni-Blog', //Ritul Update this later bro
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/static/images/newlogo.png',
   image: '/static/images/Ritul 2.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'ritulsonicareer@gmail.com',
