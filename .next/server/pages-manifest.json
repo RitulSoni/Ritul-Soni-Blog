@@ -3,7 +3,6 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/api/now-playing": "pages/api/now-playing.js",
-  "/api/views/[slug]": "pages/api/views/[slug].js",
-  "/about": "pages/about.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/api/views/[slug]": "pages/api/views/[slug].js"
 }
