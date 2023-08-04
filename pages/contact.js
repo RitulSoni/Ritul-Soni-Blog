@@ -19,11 +19,6 @@ const Contact = () => {
             />
             <ContactLink href="https://github.com/RitulSoni" title="github" icon="RitulSoni" />
             <ContactLink
-              href="https://twitter.com/ritulsonicareer"
-              title="twitter"
-              icon="ritulsonicareer"
-            />
-            <ContactLink
               href="https://www.linkedin.com/in/ritulsoni/"
               title="linkedin"
               icon="ritulsoni"
