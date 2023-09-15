@@ -223,18 +223,18 @@ export default function Now({currentlyReading, weatherData}) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            Currently, I am the head of Research & Development{' '}
+            Currently, I am a Software Engineer Intern at{' '}
             <Link
-              href={'https://careeradvancementexchange.com'}
+              href={'https://www.countryfinancial.com'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Career Advancement Exchange
+              Country Financial
             </Link>
             .
           </p>
           <br />
           <p>
-            I oversee the development of new technologies and resources for the startup. 
+            I am currently working on Microsoft Azure Cloud Development. 
           </p>
           <br />
           <p>

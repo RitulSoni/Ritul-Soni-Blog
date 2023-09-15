@@ -67,12 +67,12 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, researching and developing new technologies at{' '}
+                {text1} Currently, Interning as a Software Engineer @{' '}
                 <Link
-                  href={'https://careeradvancementexchange.com'}
+                  href={'https://www.countryfinancial.com'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  Career Advancement Exchange
+                  Country Financial
                 </Link>
               </RoughNotation>
             </p>

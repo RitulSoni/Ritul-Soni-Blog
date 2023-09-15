@@ -1,5 +1,18 @@
 const experienceData = [
   {
+    title: 'Software Engineer Intern',
+    company: 'Country Financial',
+    location: 'Champaign, IL',
+    range: 'August 2023 - Present',
+    url: 'https://countryfinancial.com',
+    text1:
+      'Migrated applications to Azure Web Apps using PHP & JavaScript, enhancing the EA and Cloud Platforms team’s expertise in cloud deployment, monitoring, and logging',
+    text2:
+      'Refactored and migrated actuarial research code from SAS to Python documented and transition process',
+    text3:
+      'Currently enhancing my skills in cloud infrastructure with a focus on Microsoft Azure, and honing expertise in CI/CD processes utilizing GitLab and pipelines.'
+  },
+  {
     title: 'Head of Research & Development',
     company: 'Career Advancement Exchange',
     location: 'Chicago, IL',
