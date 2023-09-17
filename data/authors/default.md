@@ -2,7 +2,7 @@
 name: Ritul K. Soni
 avatar: /static/images/Ritul 2.png
 occupation: Software Engineer
-company: Career Advancement Exchange
+company: Country Financial
 email: ritulsonicareer@gmail.com
 twitter: https://www.linkedin.com/in/ritulsoni/
 linkedin: https://www.linkedin.com/in/ritulsoni/
