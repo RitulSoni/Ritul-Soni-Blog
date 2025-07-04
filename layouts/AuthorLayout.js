@@ -4,7 +4,7 @@ import Link from '@/components/Link'
 import Experience from '@/components/Experience'
 import experienceData from '@/data/experienceData'
 import { RoughNotation } from 'react-rough-notation'
-import { AiOutlineTwitter } from 'react-icons/ai'
+import { AiOutlineLinkedin } from 'react-icons/ai'
 
 export default function AuthorLayout({ children, frontMatter }) {
   const {
@@ -32,27 +32,28 @@ export default function AuthorLayout({ children, frontMatter }) {
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex flex-col items-center space-x-2 pt-8 xl:sticky xl:top-0">
-            <Image
-              src={avatar}
-              alt="avatar"
-              width="192px"
-              height="192px"
-              className="h-48 w-48 rounded-full xl:rounded-full"
-              placeholder="blur"
-              blurDataURL="/static/images/SVG-placeholder.png"
-            />
+            <div className="h-48 w-48 rounded-full overflow-hidden relative">
+              <Image
+                src={avatar}
+                alt="avatar"
+                width={256}
+                height={256}
+                className="absolute object-cover"
+                placeholder="blur"
+                blurDataURL="/static/images/SVG-placeholder.png"
+              />
+            </div>
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
             <div className="flex flex-col pt-3">
               <a
-                className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
-                href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Ritul"
-                data-screen-name="@RitulSoni"
+                className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#0077B5] hover:bg-[#0077B5] hover:text-white hover:shadow dark:text-white"
+                href={linkedin}
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <AiOutlineTwitter className="mr-2 mb-0.5 inline h-5 w-5" />
+                <AiOutlineLinkedin className="mr-2 mb-0.5 inline h-5 w-5" />
                 Say Hi!
               </a>
             </div>
@@ -67,13 +68,19 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, Interning as a Software Engineer @{' '}
-                <Link
-                  href={'https://www.countryfinancial.com'}
-                  className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-                >
-                  Country Financial
-                </Link>
+                <div className="space-y-4">
+                  <div>{text1}</div>
+                  <div>{text2}</div>
+                  <div>{text3}</div>
+                  <div>Currently, an AI/ML Engineer @{' '}
+                    <Link
+                      href={'https://www.countryfinancial.com'}
+                      className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                    >
+                      Country Financial
+                    </Link>
+                  </div>
+                </div>
               </RoughNotation>
             </p>
             <br />
@@ -88,10 +95,10 @@ export default function AuthorLayout({ children, frontMatter }) {
             </p>
             <br />
             <p className="sm:block md:hidden lg:hidden">
-            I am a continous learner and am always researching new technologies. I am currently learning
+            I am a continous learner and am always researching new technologies. I am currently researching
               <span className="font-semibold">
                 {' '}
-                NextJS and D3.JS.{' '}
+                reinforcement learning for data retrieval agents.{' '}
               </span>
                 I am{' '}
               <RoughNotation
@@ -102,7 +109,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDuration={3000}
                 multiline={true}
               >
-                actively on the hunt for SWE / Quant internships anywhere in the United States.
+                actively on the hunt for AI / ML roles anywhere in the United States.
               </RoughNotation>
             </p>
             <p className="hidden md:block">

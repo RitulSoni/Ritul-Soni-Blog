@@ -1,8 +1,8 @@
 const siteMetadata = {
   title: 'Home | Ritul K. Soni',
   author: 'Ritul K. Soni',
-  headerTitle: 'Mere Musings',
-  description: 'My personal blog where I share my musings',
+  headerTitle: 'Ritul K. Soni',
+  description: 'Personal website of Ritul K. Soni - Software Engineer',
   snippets: 'Reuseable code snippets collected by Ritul',
   language: 'en-us',
   theme: 'system', // system, dark or light

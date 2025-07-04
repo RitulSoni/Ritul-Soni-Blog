@@ -223,36 +223,36 @@ export default function Now({currentlyReading, weatherData}) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            Currently, I am a Software Engineer Intern at{' '}
+            Currently, I am an AI/ML Engineer at{' '}
             <Link
               href={'https://www.countryfinancial.com'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
               Country Financial
             </Link>
-            .
+            , where I've deployed the first generative AI application in production, serving hundreds of insurance agents.
           </p>
           <br />
           <p>
-            I am currently working on Microsoft Azure Cloud Development. 
+            <strong>Research Focus:</strong> I'm researching <span className="special-underline">reinforcement learning</span> for training search agents to create plug-and-play solutions for domain-specific RAG applications and Agentic RAG systems. My work focuses on developing lightweight frameworks that optimize search quality without full model fine-tuning.
           </p>
           <br />
           <p>
-          I've been on a quest to keep up with the ever-changing modern world by diving into learning and researching new technologies. Lately, I've been getting my hands dirty with cool tools like MidJourney, playing around with LLMs like Chat GPT, exploring the creative possibilities of 3D design software like Spline, and even tinkering with various other AI tools. It's been a blast incorporating these tech wonders into my daily workflow and seeing how they amp up my productivity and push the boundaries of what I can do. 
+            The key innovation is using <span className="special-underline">"Gain Beyond RAG"</span> as a reward signal - training search agents to retrieve documents that meaningfully improve generation quality compared to naive retrieval. This achieves state-of-the-art performance with 70x less training data (2.4k vs 170k examples) and enables strong domain transfer.
           </p>
           <br />
           <p>
-          I'm always eager to expand my knowledge and keep up with the latest trends. Right now, I'm diving deep into{' '}
-            <Link
-              href={
-                'https://youtu.be/slentvTk3gY'
-              }
-              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
-            >
-              Figma to 3D Webpage Tutorial
-            </Link>
-            .
-            <br />
+            <strong>Current Interests:</strong>
+          </p>
+          <ul className="ml-4 list-disc">
+            <li><strong>Multimodal RAG:</strong> Extending search agents to handle diverse data modalities beyond text</li>
+            <li><strong>Generative AI Research:</strong> Novel architectures and training methods for LLMs</li>
+            <li><strong>Reinforcement Learning:</strong> RL frameworks for autonomous AI agents and multi-turn reasoning</li>
+            <li><strong>ML Classification:</strong> Neural networks for document processing and automated categorization</li>
+          </ul>
+          <br />
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Last updated: January 2025
           </p>
         </div>
         <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">

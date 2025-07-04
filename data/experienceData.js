@@ -1,55 +1,94 @@
 const experienceData = [
   {
+    title: 'AI/ML Engineer',
+    company: 'Country Financial',
+    location: 'Bloomington, IL (Remote)',
+    range: 'Jul 2024 - Present',
+    url: 'https://countryfinancial.com',
+    text1:
+      'Deployed the first generative AI application in production at Country Financial, serving hundreds of agents',
+    text2:
+      'Built an Agentic RAG system integrating multiple multimodal data sources to resolve complex agent queries in seconds instead of hours',
+    text3:
+      'Trained a neural network document classification model to automatically process and index thousands of documents daily, enabling scalable AI-driven knowledge retrieval and automation across internal workflows'
+  },
+  {
     title: 'Software Engineer Intern',
     company: 'Country Financial',
     location: 'Champaign, IL',
-    range: 'August 2023 - Present',
+    range: 'Aug 2023 - Jul 2024',
     url: 'https://countryfinancial.com',
     text1:
-      'Migrated applications to Azure Web Apps using PHP & JavaScript, enhancing the EA and Cloud Platforms team’s expertise in cloud deployment, monitoring, and logging',
+      'Migrated applications to Azure Web Apps using PHP & JavaScript, enhancing the EA and Cloud Platforms team\'s expertise in cloud deployment, monitoring, and logging',
     text2:
       'Refactored and migrated actuarial research code from SAS to Python documented and transition process',
     text3:
-      'Currently enhancing my skills in cloud infrastructure with a focus on Microsoft Azure, and honing expertise in CI/CD processes utilizing GitLab and pipelines.'
+      'Enhanced skills in cloud infrastructure with a focus on Microsoft Azure, and honed expertise in CI/CD processes utilizing GitLab and pipelines'
   },
   {
-    title: 'Head of Research & Development',
-    company: 'Career Advancement Exchange',
-    location: 'Chicago, IL',
-    range: 'February 2022 - May 2022',
-    url: 'https://careeradvancementexchange.com',
+    title: 'Generative AI Researcher',
+    company: 'New York University',
+    location: 'Chicago, IL (Remote)',
+    range: 'May 2024 - Sep 2024',
+    url: 'https://nyu.edu',
     text1:
-      'Led market research initiatives, leveraging data analytics and AI techniques to identify key trends, user preferences.and market opportunities resulting in a remarkable 70% increase in user engagement and platform adoption rates.',
+      'Contributed to a large-scale RAG research project (96% accuracy, 0.87 correlation) analyzing 5,800+ U.S. zoning codes to measure regulatory complexity and housing impacts',
     text2:
-      'Collaborated with the development team to integrate AI-driven algorithms into our platform, automating resume screening and candidate matching processes, reducing manual effort by 40% and improving efficiency.',
+      'Increased retrieval contextual accuracy by ~50pts through prompt chaining and reasoning, reduced p95 latency (~20ms)',
     text3:
-      'Work closely with cross-functional teams, including marketing and infrastructure, to align research findings with overall business objectives and future technology solutions',
+      'Applied LLM-based performance checks (RAGAS and Judge by LLM evaluators) to ensure high-quality research outputs'
   },
   {
     title: 'Full Stack Mobile App Developer',
-    company: 'Carle College of Medicine',
-    location: 'Champaign, IL',
-    range: 'January 2023 - May 2023',
+    company: 'Carle Illinois College of Medicine',
+    location: 'Champaign, IL (Hybrid)',
+    range: 'Feb 2023 - May 2023',
     url: 'https://medicine.illinois.edu/news/health-in-3d-new-app-helps-parents-visualize-their-childs-heart-disorder',
     text1:
-      'Designed and developed an interactive, user-friendly interface that enables patients to access animations,descriptions of heart defects, and visualizations of their heart anatomy, physiology, and conditions.',
+      'Led development of I-Heart, an innovative mobile app for congenital heart conditions using Flutter, Google Firebase, and 3D graphics libraries',
     text2:
-      'Implemented a customized, three-dimensional digital viewer for the heart models in the app, and built the backend to store all 3D models of hearts with diseases, ensuring efficient storage and retrieval of patient data.',
+      'Created an interactive platform to improve communication and understanding around cardiac abnormalities',
     text3:
-      'This app enables physicians to better communicate cardiac abnormalities, discuss surgical management and options, and helps patients better understand their condition, making more informed decisions about their own care.',
+      'Designed a user-friendly and accessible experience for patients and families, enabling physicians to better communicate cardiac conditions and treatment options'
   },
   {
-    title: 'Project Manager',
-    company: 'Department of Computer Science, University of Illinois Urbana Champaign',
+    title: 'Project Manager CS222',
+    company: 'University of Illinois Urbana-Champaign',
     location: 'Champaign, IL',
-    range: 'January 2022 - Present',
+    range: 'Jan 2023 - Jan 2024',
+    url: 'https://cs.illinois.edu',
+    text1:
+      'Guided students through challenging semester-long Machine Learning projects as a seasoned Project Manager and Mentor',
+    text2:
+      'Implemented effective code reviews and scrub boarding processes, ensuring student and project success',
+    text3:
+      'Provided mentorship and technical guidance to help students develop advanced ML skills and complete complex projects'
+  },
+  {
+    title: 'Project Manager CS124 Honors',
+    company: 'University of Illinois Urbana-Champaign',
+    location: 'Champaign, IL',
+    range: 'Jan 2022 - Jan 2024',
     url: 'https://cs196.cs.illinois.edu',
     text1:
-      'Project Manager for both CS124 Honors and CS222 at UIUC',
+      'Led small teams of developers to create meaningful software and learn various tech stacks including Flask, Python, Pygame, and HTML/CSS',
     text2:
-      'Managed multiple teams of 5-6 people in developing advanced full stack applications, ensuring timely completion of project timelines and deliverables by implementing agile software development methodologies such as CD/CI, utilizing scrum boards,and Git version control.',
+      'Taught Git Version Control and implemented Scrum Project Management methodologies',
     text3:
-      'Exemplified exceptional communication skills, fostering seamless collaboration among team members and ensuring effective project management. Successfully orchestrated the coordination of diverse teams, reinforcing my comprehensive grasp of agile practices while actively mentoring and guiding team members towards achieving project goals.',
+      'Managed multiple teams ensuring timely completion of project deliverables while mentoring students in software development best practices'
+  },
+  {
+    title: 'Course Assistant CS124',
+    company: 'University of Illinois Urbana-Champaign',
+    location: 'Champaign, IL',
+    range: 'Jan 2022 - Jun 2022',
+    url: 'https://cs.illinois.edu',
+    text1:
+      'Served as Course Assistant for CS124, providing support to students learning fundamental programming concepts',
+    text2:
+      'Assisted with Java programming instruction and software development fundamentals',
+    text3:
+      'Helped students understand core computer science concepts and debugging techniques'
   },
 ]
 

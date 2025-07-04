@@ -3,19 +3,17 @@ import Link from 'next/link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
+import ChatComponent from '@/components/ChatComponent'
 
 
 const MAX_DISPLAY = 3
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-
-  return { props: { posts } }
+  return { props: { posts: [] } }
 }
 
 export default function Home({ posts }) {
@@ -174,104 +172,62 @@ export default function Home({ posts }) {
                   </Link>
                 </div>
               </div>
+              <div className="my-2 grid items-start gap-8">
+                <div className="group relative">
+                  <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                  <Link href="/ai-chat">
+                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
+                      <span className="flex items-center space-x-5">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-6 w-6 -rotate-6 text-cyan-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                          />
+                        </svg>
+                        <span className="pr-6 text-gray-900 dark:text-gray-100">
+                          Chat with AI about me
+                        </span>
+                      </span>
+                      <span className="pl-6 text-cyan-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
+                        AI Chat&nbsp;&rarr;
+                      </span>
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
-          Latest
+          Ritul<span className="text-primary-color-500 dark:text-primary-color-dark-500">GPT</span> 
         </h2>
         <hr className="border-gray-200 dark:border-gray-700" />
-        <ul>
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <Link
-                href={`/blog/${slug}`}
-                key={slug}
-                className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
-              >
-                <li className="py-6">
-                  <article>
-                    <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date)}</time>
-                          {' • '}
-                          <ViewCounter className="mx-1" slug={slug} />
-                          views
-                        </dd>
-                      </dl>
-                      <div className="space-y-5 xl:col-span-4">
-                        <div className="space-y-1">
-                          <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                              <Link
-                                href={`/blog/${slug}`}
-                                className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                              >
-                                {title}
-                              </Link>
-                            </h2>
-                          </div>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                          <div className="prose max-w-none pt-5 text-gray-500 dark:text-gray-400">
-                            {summary}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
-      </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end pt-5 text-lg font-normal leading-6">
-          <Link
-            href="/blog"
-            className=" special-underline-new text-primary-500 hover:text-gray-100 hover:no-underline dark:text-primary-500 hover:dark:text-gray-100"
-            aria-label="all posts"
-          >
-            All Posts &rarr;
-          </Link>
+        
+        {/* AI Chat Component */}
+        <div className="pt-8">
+          <ChatComponent height="min-h-[400px] max-h-[500px]" />
+          
+          {/* Call to Action */}
+          <div className="mt-6 text-center">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              Get instant answers about Ritul's background, skills, and experience
+            </p>
+            <Link href="/ai-chat">
+              <span className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg hover:from-primary-600 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+                Start Full Conversation &rarr;
+              </span>
+            </Link>
+          </div>
         </div>
-      )}   
-    <div className="h-content flex flex-col sm:flex-row justify-around items-center sm:h-content-sm">
-    <h1 className="text-4xl sm:text-6xl tracking-tightest my-10 sm:my-28 select-none text-center font-extrabold leading-none">
-      <span
-        data-content="Blog."
-        className="relative before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-1 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-      >
-        <span className="animate-gradient-foreground-1 bg-gradient-to-br from-gradient-1-start to-gradient-1-end bg-clip-text px-2 text-transparent">
-          Blog.
-        </span>
-      </span>
-      <span
-        data-content="Coding."
-        className="relative before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-2 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-      >
-        <span className="animate-gradient-foreground-2 bg-gradient-to-br from-gradient-2-start to-gradient-2-end bg-clip-text px-2 text-transparent">
-          Coding.
-        </span>
-      </span>
-      <span
-        data-content="Portfolio."
-        className="relative before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-3 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
-      >
-        <span className="animate-gradient-foreground-3 bg-gradient-to-br from-gradient-3-start to-gradient-3-end bg-clip-text px-2 text-transparent">
-          Portfolio.
-        </span>
-      </span>
-    </h1>
-  </div>
+      </div>
       {siteMetadata.newsletter.provider !== '' && (
         <div className="flex items-center justify-center pt-4">{/* <NewsletterForm /> */}</div>
       )}
