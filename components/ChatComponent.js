@@ -142,7 +142,7 @@ export default function ChatComponent({
           <h3 className={`font-semibold text-gray-900 dark:text-gray-100 ${showInput ? 'text-sm mb-2' : 'text-base mb-4'}`}>
             Quick Questions
           </h3>
-          <div className={`grid ${showInput ? 'grid-cols-4 gap-2' : 'grid-cols-2 gap-6'}`}>
+          <div className={`grid ${showInput ? 'grid-cols-2 sm:grid-cols-4 gap-2' : 'grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6'}`}>
             {predefinedQuestions.map((questionObj, index) => {
               return (
                 <div key={index} className="group relative h-full">
@@ -152,14 +152,14 @@ export default function ChatComponent({
                     disabled={isLoading}
                     className={`relative flex w-full h-full items-center divide-x divide-gray-600 rounded-lg bg-white leading-none dark:bg-black disabled:opacity-50 transition duration-200 hover:scale-105 ${
                       showInput 
-                        ? 'px-3 py-2 min-h-[40px]' 
-                        : 'px-6 py-4 min-h-[64px]'
+                        ? 'px-2 sm:px-3 py-2 sm:py-2 min-h-[44px] sm:min-h-[40px]' 
+                        : 'px-4 sm:px-6 py-3 sm:py-4 min-h-[56px] sm:min-h-[64px]'
                     }`}
                   >
-                    <span className={`flex items-center flex-1 min-w-0 ${showInput ? 'space-x-2 pr-2' : 'space-x-4 pr-6'}`}>
+                    <span className={`flex items-center flex-1 min-w-0 ${showInput ? 'space-x-1 sm:space-x-2 pr-1 sm:pr-2' : 'space-x-2 sm:space-x-4 pr-3 sm:pr-6'}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className={`-rotate-6 text-primary-500 flex-shrink-0 ${showInput ? 'h-3 w-3' : 'h-5 w-5'}`}
+                        className={`-rotate-6 text-primary-500 flex-shrink-0 ${showInput ? 'h-3 w-3 sm:h-3 sm:w-3' : 'h-4 w-4 sm:h-5 sm:w-5'}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -171,14 +171,14 @@ export default function ChatComponent({
                           d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
                         />
                       </svg>
-                      <span className={`text-gray-900 dark:text-gray-100 font-medium ${showInput ? 'text-xs' : 'text-base'}`}>
+                      <span className={`text-gray-900 dark:text-gray-100 font-medium ${showInput ? 'text-xs sm:text-xs' : 'text-sm sm:text-base'}`}>
                         {questionObj.label}
                       </span>
                     </span>
                     <span className={`text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 flex-shrink-0 whitespace-nowrap ${
                       showInput 
-                        ? 'pl-2 text-xs' 
-                        : 'pl-6 text-base'
+                        ? 'pl-1 sm:pl-2 text-xs sm:text-xs' 
+                        : 'pl-3 sm:pl-6 text-sm sm:text-base'
                     }`}>
                       Ask&nbsp;&rarr;
                     </span>
