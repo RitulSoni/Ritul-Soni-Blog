@@ -1,28 +1,32 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
+import { useState } from 'react'
 
 const publicationsData = [
   {
-    title: 'Advancing Agentic RAG Systems for Real-World Applications',
-    description: 'A comprehensive study on implementing autonomous retrieval-augmented generation systems that can dynamically adapt their search strategies based on query complexity and context.',
-    pdfUrl: '/static/pdf/agentic-rag-systems.pdf',
-    externalUrl: 'https://arxiv.org/abs/example',
-    type: 'research' // research, conference, journal
-  },
+    title: 'Reasoning-Enhanced Healthcare Predictions with Reinforcement Learning Search Agent with RAG Systems (Coming Soon)',
+    description: 'A novel hybrid framework that integrates reinforcement learning-trained search agents with reasoning-enhanced clinical prediction models. The system replaces static knowledge graphs with dynamic RL agents that learn optimal retrieval policies for medical RAG applications, demonstrating superior performance on mortality and readmission prediction tasks using MIMIC-III/IV datasets.',
+    pdfUrl: '/static/pdf/rl-rag-medical-predictions.pdf',
+    externalUrl: 'https://arxiv.org/abs/example-rl-medical-rag',
+    type: 'conference',
+    comingSoon: true
+   },
   {
-    title: 'Generative AI in Production: Scaling Challenges and Solutions', 
-    description: 'An analysis of architectural patterns and optimization techniques for deploying large language models in production environments serving thousands of concurrent users.',
-    pdfUrl: '/static/pdf/generative-ai-production.pdf',
-    externalUrl: 'https://proceedings.example.com/paper123',
-    type: 'conference'
-  },
-  {
-    title: 'Multi-Modal RAG: Bridging Text and Visual Understanding',
-    description: 'Novel approaches to combining textual and visual retrieval mechanisms for enhanced question-answering systems across diverse data modalities.',
-    pdfUrl: '/static/pdf/multimodal-rag.pdf', 
-    externalUrl: 'https://journal.example.com/vol1/paper456',
-    type: 'journal'
-  }
+    title: 'Telephone Operators Ousted by Interactive Voice Response (IVR) Systems: An Analysis of Technological Displacement and Labor Market Adaptation',
+    description: 'An empirical analysis examining the 85% decline in telephone operator employment from 2002-2021, applying skill-biased technological change theory to understand how automation affects specific demographic groups and creates new opportunities in complementary sectors.',
+    pdfUrl: '/static/pdf/Tech Deplacement and Labor Markets.pdf',
+    externalUrl: 'https://example.com/papers/telephone-operators-study',
+    type: 'research',
+    comingSoon: false
+   },
+   {
+    title: 'Analyzing the Nanoscale Properties of Gold Nanoparticles Using UV-Vis Spectroscopy and Transmission Electron Microscopy',
+    description: 'An experimental study investigating the relationship between gold nanoparticle size and optical properties using UV-Vis spectroscopy and TEM imaging. Research demonstrates how varying HAuCl4 concentrations affects particle diameter and wavelength characteristics for potential biomedical applications.',
+    pdfUrl: '/static/pdf/ESRP Poster.pdf',
+    externalUrl: 'https://www.anl.gov/education/analyzing-gold-nanoparticles',
+    type: 'research',
+    comingSoon: false
+   }
 ]
 
 const getIconForType = (type) => {
@@ -73,6 +77,17 @@ const getTypeColor = (type) => {
 }
 
 export default function Publications() {
+  const [showComingSoonPopup, setShowComingSoonPopup] = useState(false)
+  
+  const handleViewOnlineClick = (publication) => {
+    if (publication.comingSoon) {
+      setShowComingSoonPopup(true)
+      setTimeout(() => setShowComingSoonPopup(false), 3000)
+    } else {
+      window.open(publication.pdfUrl, '_blank')
+    }
+  }
+
   return (
     <>
       <PageSEO
@@ -108,13 +123,17 @@ export default function Publications() {
                     
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                      <div className="flex items-start space-x-3 mb-2">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 flex-1">
                           {publication.title}
                         </h3>
-                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 ${getTypeColor(publication.type)}`}>
-                          {getTypeLabel(publication.type)}
-                        </span>
+                        <div className="group relative flex-shrink-0">
+                          <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 opacity-25 blur transition duration-1000 group-hover:opacity-50 group-hover:duration-200"></div>
+                          <span className="relative inline-flex items-center px-3 py-1.5 bg-white dark:bg-black border border-gray-200 dark:border-gray-700 rounded-lg text-xs font-medium text-gray-700 dark:text-gray-300 shadow-sm">
+                            {getIconForType(publication.type)}
+                            <span className="ml-2">{getTypeLabel(publication.type)}</span>
+                          </span>
+                        </div>
                       </div>
                       
                       <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
@@ -123,33 +142,15 @@ export default function Publications() {
                       
                       {/* Action Buttons */}
                       <div className="flex flex-wrap gap-4">
-                        {publication.pdfUrl && (
-                          <a
-                            href={publication.pdfUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white text-sm font-medium rounded-lg hover:from-red-600 hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
-                          >
-                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            Download PDF
-                          </a>
-                        )}
-                        
-                        {publication.externalUrl && (
-                          <a
-                            href={publication.externalUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-medium rounded-lg hover:from-primary-600 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
-                          >
-                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                            View Online
-                          </a>
-                        )}
+                        <button
+                          onClick={() => handleViewOnlineClick(publication)}
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-medium rounded-lg hover:from-primary-600 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
+                        >
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          View Online
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -171,6 +172,36 @@ export default function Publications() {
             </div>
           )}
         </div>
+        
+        {/* Quirky Coming Soon Popup */}
+        {showComingSoonPopup && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setShowComingSoonPopup(false)}></div>
+            <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-8 mx-4 max-w-md w-full shadow-2xl border border-gray-200 dark:border-gray-700">
+              <div className="text-center">
+                <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 mb-4">
+                  <svg className="h-8 w-8 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
+                  🚧 Coming Soon! 🚧
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  This paper is still brewing in the research lab! ☕️
+                  <br />
+                  Hang tight, great things take time! 🎯
+                </p>
+                <button
+                  onClick={() => setShowComingSoonPopup(false)}
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-sm font-medium rounded-lg hover:from-primary-600 hover:to-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
+                >
+                  Got it! 👍
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   )
