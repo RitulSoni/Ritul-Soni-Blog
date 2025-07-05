@@ -16,9 +16,22 @@ export default function ChatComponent({
   const messagesEndRef = useRef(null)
 
   const predefinedQuestions = [
-    "What is Ritul's education?",
-    "Ritul's specializations?",
-    "Ritul's Projects?"
+    {
+      label: "Education?",
+      fullQuestion: "Tell me about Ritul's education - what degrees does he have and from which universities?"
+    },
+    {
+      label: "Specializations?", 
+      fullQuestion: "What are Ritul's technical specializations and areas of expertise?"
+    },
+    {
+      label: "Research?",
+      fullQuestion: "Tell me about Ritul's research interests and academic work."
+    },
+    {
+      label: "Projects?",
+      fullQuestion: "What notable projects has Ritul built and worked on?"
+    }
   ]
 
   const scrollToBottom = () => {
@@ -26,8 +39,11 @@ export default function ChatComponent({
   }
 
   useEffect(() => {
-    scrollToBottom()
-  }, [messages])
+    // Only auto-scroll on ai-chat page (when showInput is true)
+    if (showInput) {
+      scrollToBottom()
+    }
+  }, [messages, showInput])
 
   const handleSend = async (message = inputValue) => {
     if (!message.trim() || isLoading) return
@@ -122,34 +138,28 @@ export default function ChatComponent({
         <div className="border-t border-gray-200 dark:border-gray-700"></div>
 
         {/* Predefined Questions Section */}
-        <div className="bg-white dark:bg-black p-6 border-b border-gray-200 dark:border-gray-700">
-          <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100 mb-4">
+        <div className={`bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 ${showInput ? 'p-6' : 'p-6'}`}>
+          <h3 className={`font-semibold text-gray-900 dark:text-gray-100 ${showInput ? 'text-sm mb-2' : 'text-base mb-4'}`}>
             Quick Questions
           </h3>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-            {predefinedQuestions.map((question, index) => {
-              const gradients = [
-                'from-pink-600 to-purple-600',
-                'from-fuchsia-600 to-emerald-600', 
-                'from-primary-500 to-primary-600'
-              ];
-              const textColors = [
-                'text-amber-400',
-                'text-indigo-400',
-                'text-primary-400'
-              ];
+          <div className={`grid ${showInput ? 'grid-cols-4 gap-2' : 'grid-cols-2 gap-6'}`}>
+            {predefinedQuestions.map((questionObj, index) => {
               return (
-                <div key={index} className="group relative">
-                  <div className={`animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r ${gradients[index]} opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200`}></div>
+                <div key={index} className="group relative h-full">
+                  <div className={`animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200`}></div>
                   <button
-                    onClick={() => handleSend(question)}
+                    onClick={() => handleSend(questionObj.fullQuestion)}
                     disabled={isLoading}
-                    className="relative flex w-full items-center divide-x divide-gray-600 rounded-lg bg-white px-5 py-4 leading-none dark:bg-black disabled:opacity-50 transition duration-200 hover:scale-105"
+                    className={`relative flex w-full h-full items-center divide-x divide-gray-600 rounded-lg bg-white leading-none dark:bg-black disabled:opacity-50 transition duration-200 hover:scale-105 ${
+                      showInput 
+                        ? 'px-3 py-2 min-h-[40px]' 
+                        : 'px-6 py-4 min-h-[64px]'
+                    }`}
                   >
-                    <span className="flex items-center space-x-3 pr-4 flex-1 min-w-0">
+                    <span className={`flex items-center flex-1 min-w-0 ${showInput ? 'space-x-2 pr-2' : 'space-x-4 pr-6'}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 -rotate-6 text-primary-500 flex-shrink-0"
+                        className={`-rotate-6 text-primary-500 flex-shrink-0 ${showInput ? 'h-3 w-3' : 'h-5 w-5'}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -161,11 +171,15 @@ export default function ChatComponent({
                           d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
                         />
                       </svg>
-                      <span className="text-sm text-gray-900 dark:text-gray-100 truncate">
-                        {question}
+                      <span className={`text-gray-900 dark:text-gray-100 font-medium ${showInput ? 'text-xs' : 'text-base'}`}>
+                        {questionObj.label}
                       </span>
                     </span>
-                    <span className={`pl-4 text-sm ${textColors[index]} transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 flex-shrink-0`}>
+                    <span className={`text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100 flex-shrink-0 whitespace-nowrap ${
+                      showInput 
+                        ? 'pl-2 text-xs' 
+                        : 'pl-6 text-base'
+                    }`}>
                       Ask&nbsp;&rarr;
                     </span>
                   </button>

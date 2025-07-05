@@ -10,17 +10,37 @@ export default function CommandPalette({ navigation }) {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [query, setQuery] = useState('')
+  const [scrollPosition, setScrollPosition] = useState(0)
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
+        event.preventDefault()
+        if (!isOpen) {
+          // Save current scroll position before opening
+          setScrollPosition(window.scrollY)
+        }
         setIsOpen(!isOpen)
+      }
+      if (event.key === 'Escape' && isOpen) {
+        event.preventDefault()
+        setIsOpen(false)
       }
     }
     window.addEventListener('keydown', handleKeyDown)
 
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [isOpen])
+
+  // Prevent scroll restoration when dialog closes
+  useEffect(() => {
+    if (!isOpen && scrollPosition !== 0) {
+      // Restore scroll position after dialog closes
+      setTimeout(() => {
+        window.scrollTo(0, scrollPosition)
+      }, 0)
+    }
+  }, [isOpen, scrollPosition])
 
   const toggleIcon = () => {
     setIsOpen(!isOpen)
@@ -49,7 +69,11 @@ export default function CommandPalette({ navigation }) {
         <FiCommand />
       </motion.button>
       <Transition.Root show={isOpen} as={Fragment} afterLeave={() => setQuery('')}>
-        <Dialog onClose={setIsOpen} className="fixed inset-0 z-20 overflow-y-auto p-12 pt-[20vh]">
+        <Dialog 
+          onClose={() => setIsOpen(false)} 
+          className="fixed inset-0 z-20 overflow-y-auto p-12 pt-[20vh]"
+          initialFocus={null}
+        >
           <Transition.Child
             enter="duration-300 ease-out"
             enterFrom="opacity-0"
