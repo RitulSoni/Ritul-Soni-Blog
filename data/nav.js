@@ -2,6 +2,7 @@ export const navigation = {
   pages: [
     { name: 'Home', href: '/' },
     { name: 'AI Chat', href: '/ai-chat' },
+    { name: 'Publications', href: '/publications' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
     { name: 'Blog', href: '/blog' },
