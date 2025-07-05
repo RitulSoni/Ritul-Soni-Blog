@@ -50,11 +50,9 @@ async function getWebsiteContent() {
       console.error('Error reading about content:', error)
     }
 
-    // Get Projects data - read fresh each time
+    // Get Projects data - use dynamic import for serverless compatibility
     try {
-      const projectsPath = path.join(process.cwd(), 'data', 'projectsData.js')
-      delete require.cache[require.resolve(projectsPath)]
-      const projectsData = require(projectsPath).default || require(projectsPath)
+      const { default: projectsData } = await import('../../data/projectsData.js')
       
       content += `\n\nPROJECTS:\n`
       projectsData.forEach((project, index) => {
