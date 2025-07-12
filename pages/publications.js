@@ -12,6 +12,30 @@ const publicationsData = [
     comingSoon: true
    },
   {
+    title: 'Comparing Self-Reported Subjective Wellbeing to Sentiment Analysis Approaches to Measuring Happiness',
+    description: 'A comprehensive study evaluating the alignment between lexical models and cognitive-appraisal models in measuring happiness. Using Reddit survey data on short-term and long-term subjective well-being, this research compares self-reported happiness ratings with computer-generated ratings from large language models and lexical sentiment analysis methods, revealing weak but significant correlations and highlighting the limitations of computational approaches in predicting user-reported wellness measures.',
+    pdfUrl: '/static/pdf/Approaches to Measuring Happiness.pdf',
+    externalUrl: 'https://example.com/papers/happiness-measurement-study',
+    type: 'research',
+    comingSoon: false
+   },
+  {
+    title: 'CodeBlend: A Survey of Efficient KV-Caching Methods for Graph-Based Structures',
+    description: 'A research study exploring the adaptation of the CacheBlend framework for efficient key-value cache management in code dependency systems. The project leverages mutual import relationships between Python packages to selectively blend caches, implementing advanced eviction strategies including LRU, LFU, Least Weighted, and Composite Cache methods to optimize dependency management for faster retrieval while maintaining optimal performance under memory constraints.',
+    pdfUrl: '/static/pdf/codeblend.pdf',
+    externalUrl: 'https://example.com/papers/codeblend-study',
+    type: 'research',
+    comingSoon: false
+   },
+  {
+    title: 'Reproducing and Extending Bias Analysis in Clinical Contextual Word Embeddings: A Final Report',
+    description: 'A comprehensive reproduction study of "Hurtful Words: Quantifying Biases in Clinical Contextual Word Embeddings" focusing on gender bias in clinical BERT models. This research reproduces key methodologies using the Baseline Clinical BERT model and MIMIC-III dataset, implementing bias quantification through prior-adjusted log-probability scores and downstream in-hospital mortality prediction tasks. The study reveals context-dependent gender associations and measurable fairness gaps, supporting the fundamental conclusion that clinical language models exhibit quantifiable biases with critical implications for healthcare AI deployment.',
+    pdfUrl: '/static/pdf/CS598_Final_Project_Report.pdf',
+    externalUrl: 'https://example.com/papers/clinical-bias-analysis',
+    type: 'research',
+    comingSoon: false
+   },
+  {
     title: 'Telephone Operators Ousted by Interactive Voice Response (IVR) Systems: An Analysis of Technological Displacement and Labor Market Adaptation',
     description: 'An empirical analysis examining the 85% decline in telephone operator employment from 2002-2021, applying skill-biased technological change theory to understand how automation affects specific demographic groups and creates new opportunities in complementary sectors.',
     pdfUrl: '/static/pdf/Tech Deplacement and Labor Markets.pdf',

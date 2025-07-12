@@ -18,6 +18,51 @@ const publicationsData = [
     )
   },
   {
+    id: 'happiness-measurement',
+    title: 'Comparing Self-Reported Subjective Wellbeing to Sentiment Analysis Approaches to Measuring Happiness',
+    description: 'A comprehensive study evaluating the alignment between lexical models and cognitive-appraisal models in measuring happiness using Reddit survey data and computational sentiment analysis methods.',
+    pdfUrl: '/static/pdf/Approaches to Measuring Happiness.pdf',
+    type: 'research',
+    comingSoon: false,
+    shortTitle: 'Measuring Happiness: Self-Report vs Sentiment Analysis',
+    color: 'from-teal-500 to-cyan-600',
+    icon: (
+      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1a3 3 0 000-6h-1m0 6V4m0 6h6m-7 0v10a2 2 0 002 2h8a2 2 0 002-2V10M9 10H5a2 2 0 00-2 2v8a2 2 0 002 2h4" />
+      </svg>
+    )
+  },
+  {
+    id: 'codeblend',
+    title: 'CodeBlend: A Survey of Efficient KV-Caching Methods for Graph-Based Structures',
+    description: 'A research study exploring the adaptation of the CacheBlend framework for efficient key-value cache management in code dependency systems using mutual import relationships between Python packages.',
+    pdfUrl: '/static/pdf/codeblend.pdf',
+    type: 'research',
+    comingSoon: false,
+    shortTitle: 'CodeBlend: KV-Caching for Graph Structures',
+    color: 'from-orange-500 to-red-600',
+    icon: (
+      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+    )
+  },
+  {
+    id: 'clinical-bias-analysis',
+    title: 'Reproducing and Extending Bias Analysis in Clinical Contextual Word Embeddings: A Final Report',
+    description: 'A comprehensive reproduction study focusing on gender bias in clinical BERT models using the MIMIC-III dataset, implementing bias quantification and fairness analysis in healthcare AI.',
+    pdfUrl: '/static/pdf/CS598_Final_Project_Report.pdf',
+    type: 'research',
+    comingSoon: false,
+    shortTitle: 'Clinical AI Bias Analysis Reproduction Study',
+    color: 'from-indigo-500 to-purple-600',
+    icon: (
+      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    )
+  },
+  {
     id: 'telephone-operators',
     title: 'Telephone Operators Ousted by Interactive Voice Response (IVR) Systems: An Analysis of Technological Displacement and Labor Market Adaptation',
     description: 'An empirical analysis examining the 85% decline in telephone operator employment from 2002-2021.',
