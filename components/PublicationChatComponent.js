@@ -163,7 +163,19 @@ export default function PublicationChatComponent({
                 >
                   <div className="text-base leading-relaxed whitespace-pre-wrap space-y-2">
                     {message.content.split('\n').map((line, lineIndex) => {
-                      // Handle bold text (section headers)
+                      // Process inline markdown (bold text)
+                      const processInlineMarkdown = (text) => {
+                        const parts = text.split(/(\*\*[^*]+\*\*)/g)
+                        return parts.map((part, partIndex) => {
+                          if (part.startsWith('**') && part.endsWith('**')) {
+                            const boldText = part.slice(2, -2)
+                            return <strong key={partIndex} className="font-semibold text-gray-900 dark:text-gray-100">{boldText}</strong>
+                          }
+                          return part
+                        })
+                      }
+
+                      // Handle bold text (section headers) - full line bold
                       if (line.match(/^\*\*(.+?)\*\*$/)) {
                         const text = line.replace(/^\*\*(.+?)\*\*$/, '$1')
                         return (
@@ -177,7 +189,7 @@ export default function PublicationChatComponent({
                         return (
                           <div key={lineIndex} className="flex items-start space-x-2 ml-2">
                             <span className="text-primary-500 font-bold mt-1">•</span>
-                            <span className="flex-1">{line.replace(/^•\s/, '')}</span>
+                            <span className="flex-1">{processInlineMarkdown(line.replace(/^•\s/, ''))}</span>
                           </div>
                         )
                       }
@@ -186,7 +198,7 @@ export default function PublicationChatComponent({
                         return (
                           <div key={lineIndex} className="flex items-start space-x-2 ml-6">
                             <span className="text-primary-400 font-bold mt-1">•</span>
-                            <span className="flex-1">{line.replace(/^\s{2}•\s/, '')}</span>
+                            <span className="flex-1">{processInlineMarkdown(line.replace(/^\s{2}•\s/, ''))}</span>
                           </div>
                         )
                       }
@@ -195,7 +207,7 @@ export default function PublicationChatComponent({
                         return (
                           <div key={lineIndex} className="flex items-start space-x-2 ml-2">
                             <span className="text-primary-500 font-semibold mt-1">{line.match(/^(\d+\.)/)[1]}</span>
-                            <span className="flex-1">{line.replace(/^\d+\.\s/, '')}</span>
+                            <span className="flex-1">{processInlineMarkdown(line.replace(/^\d+\.\s/, ''))}</span>
                           </div>
                         )
                       }
@@ -203,11 +215,11 @@ export default function PublicationChatComponent({
                       else if (line.trim() === '') {
                         return <div key={lineIndex} className="h-2"></div>
                       }
-                      // Regular text
+                      // Regular text with inline markdown
                       else {
                         return (
                           <div key={lineIndex} className={line.trim() === '' ? 'h-2' : ''}>
-                            {line || '\u00A0'}
+                            {line ? processInlineMarkdown(line) : '\u00A0'}
                           </div>
                         )
                       }
