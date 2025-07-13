@@ -16,6 +16,7 @@ const publicationsData = [
     description: 'A comprehensive study evaluating the alignment between lexical models and cognitive-appraisal models in measuring happiness. Using Reddit survey data on short-term and long-term subjective well-being, this research compares self-reported happiness ratings with computer-generated ratings from large language models and lexical sentiment analysis methods, revealing weak but significant correlations and highlighting the limitations of computational approaches in predicting user-reported wellness measures.',
     pdfUrl: '/static/pdf/Approaches to Measuring Happiness.pdf',
     externalUrl: 'https://example.com/papers/happiness-measurement-study',
+    githubUrl: 'https://github.com/RitulSoni/Approaches-To-Measuring-Happiness',
     type: 'research',
     comingSoon: false
    },
@@ -24,6 +25,7 @@ const publicationsData = [
     description: 'A research study exploring the adaptation of the CacheBlend framework for efficient key-value cache management in code dependency systems. The project leverages mutual import relationships between Python packages to selectively blend caches, implementing advanced eviction strategies including LRU, LFU, Least Weighted, and Composite Cache methods to optimize dependency management for faster retrieval while maintaining optimal performance under memory constraints.',
     pdfUrl: '/static/pdf/codeblend.pdf',
     externalUrl: 'https://example.com/papers/codeblend-study',
+    githubUrl: 'https://github.com/RitulSoni/CodeBlend',
     type: 'research',
     comingSoon: false
    },
@@ -32,6 +34,7 @@ const publicationsData = [
     description: 'A comprehensive reproduction study of "Hurtful Words: Quantifying Biases in Clinical Contextual Word Embeddings" focusing on gender bias in clinical BERT models. This research reproduces key methodologies using the Baseline Clinical BERT model and MIMIC-III dataset, implementing bias quantification through prior-adjusted log-probability scores and downstream in-hospital mortality prediction tasks. The study reveals context-dependent gender associations and measurable fairness gaps, supporting the fundamental conclusion that clinical language models exhibit quantifiable biases with critical implications for healthcare AI deployment.',
     pdfUrl: '/static/pdf/CS598_Final_Project_Report.pdf',
     externalUrl: 'https://example.com/papers/clinical-bias-analysis',
+    githubUrl: 'https://github.com/RitulSoni/CS598-Hurtful-Words-Final-Project',
     type: 'research',
     comingSoon: false
    },
@@ -40,6 +43,8 @@ const publicationsData = [
     description: 'An empirical analysis examining the 85% decline in telephone operator employment from 2002-2021, applying skill-biased technological change theory to understand how automation affects specific demographic groups and creates new opportunities in complementary sectors.',
     pdfUrl: '/static/pdf/Tech Deplacement and Labor Markets.pdf',
     externalUrl: 'https://example.com/papers/telephone-operators-study',
+    githubUrl: 'https://github.com/RitulSoni/Data-Viz-US-Wage-Employment-Statistics',
+    projectUrl: 'https://data-viz-us-wage-employment-statistics.vercel.app',
     type: 'research',
     comingSoon: false
    },
@@ -175,6 +180,28 @@ export default function Publications() {
                           </svg>
                           View Online
                         </button>
+                        {publication.githubUrl && (
+                          <button
+                            onClick={() => window.open(publication.githubUrl, '_blank')}
+                            className="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white text-sm font-medium rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
+                          >
+                            <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                          </button>
+                        )}
+                        {publication.projectUrl && (
+                          <button
+                            onClick={() => window.open(publication.projectUrl, '_blank')}
+                            className="inline-flex items-center px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white text-sm font-medium rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
+                          >
+                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                            </svg>
+                            Project Website
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
