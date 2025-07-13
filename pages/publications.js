@@ -17,6 +17,7 @@ const publicationsData = [
     pdfUrl: '/static/pdf/Approaches to Measuring Happiness.pdf',
     externalUrl: 'https://example.com/papers/happiness-measurement-study',
     githubUrl: 'https://github.com/RitulSoni/Approaches-To-Measuring-Happiness',
+    posterUrl: '/static/pdf/Final Poster CS598.pptx.pdf',
     type: 'research',
     comingSoon: false
    },
@@ -200,6 +201,17 @@ export default function Publications() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                             </svg>
                             Project Website
+                          </button>
+                        )}
+                        {publication.posterUrl && (
+                          <button
+                            onClick={() => window.open(publication.posterUrl, '_blank')}
+                            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
+                          >
+                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            View Poster
                           </button>
                         )}
                       </div>
