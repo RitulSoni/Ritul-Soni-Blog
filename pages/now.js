@@ -261,16 +261,6 @@ export default function Now({currentlyReading, weatherData}) {
 
         {/* Personal life */}
         <div className="pt-6">
-          <p>
-            I've been gradually building up my online portfolio and blog to have a place to share the insights of my life online. Almost like a virtual journal.{' '}
-            <Link
-              href={'https://www.swyx.io/learn-in-public'}
-              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
-            >
-              This
-            </Link>{' '}
-            article is a great reason to start your own blog.
-          </p>
           <br />
           <br />
         </div>
