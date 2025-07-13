@@ -5,7 +5,6 @@ export const navigation = {
     { name: 'Publications', href: '/publications' },
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
     { name: 'Uses', href: '/uses' },
     { name: 'Now', href: '/now' },
